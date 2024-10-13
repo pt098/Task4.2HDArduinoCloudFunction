@@ -1,0 +1,130 @@
+/* Traffic light colors */
+:root {
+    --whole: #333333;
+    --color1: #ff0000; /* red */
+    --color2: #ffff00; /* yellow */
+    --color3: #00ff00; /* green */
+  }
+  
+  body {
+    background-color: #add8e6; /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  #traffic-light {
+    /* Main traffic light */
+    background-color: var(--whole);
+    width: 120px;
+    height: 320px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input {
+    /* Remove default style */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Make the traffic lights appear */
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+    background-color: grey;
+    border-radius: 100%;
+    display: block;
+  }
+  
+  #color1 {
+    background-color: #cc0000;
+  }
+  #color1:hover {
+    animation: blink1 1.1s step-end infinite;
+  }
+  #color1:checked {
+    background-color: var(--color1);
+    box-shadow: 0 0 6em #ff6666;
+  }
+  
+  #color2 {
+    background-color: #cccc00;
+  }
+  #color2:hover {
+    animation: blink2 1s step-end infinite;
+  }
+  #color2:checked {
+    background-color: var(--color2);
+    box-shadow: 0 0 6em #ffff99;
+  }
+  
+  #color3 {
+    background-color: #009900;
+  }
+  #color3:hover {
+    animation: blink3 1s step-end infinite;
+  }
+  #color3:checked {
+    background-color: var(--color3);
+    box-shadow: 0 0 6em #66ff66;
+  }
+  
+  /* Keyframes for blinking effect */
+  @keyframes blink1 {
+    0% {
+      background-color: var(--color1);
+      box-shadow: 0 0 6em #ff6666;
+    }
+  
+    50% {
+      background-color: #cc0000;
+      box-shadow: 0 0 0 transparent;
+    }
+  }
+  
+  @keyframes blink2 {
+    0% {
+      background-color: var(--color2);
+      box-shadow: 0 0 6em #ffff99;
+    }
+  
+    50% {
+      background-color: #cccc00;
+      box-shadow: 0 0 0 transparent;
+    }
+  }
+  
+  @keyframes blink3 {
+    0% {
+      background-color: var(--color3);
+      box-shadow: 0 0 6em #66ff66;
+    }
+  
+    50% {
+      background-color: #009900;
+      box-shadow: 0 0 0 transparent;
+    }
+  }
+  
+  /* Extra styles */
+  * {
+    user-select: none;
+    outline: none;
+  }
+  
